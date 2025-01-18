@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="heart.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="cube">
+        <img src="/image_file/heart.png" alt="heart">
+    </div>
+
+    <audio id="heartbeat-sound">
+        <source src="/sound/heartbeat.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        window.onload = function() {
+            const heartbeatSound = document.getElementById('heartbeat-sound');
+            heartbeatSound.play();
+        };
+
+        setInterval(() => {
+            const heartbeatSound = document.getElementById('heartbeat-sound');
+            heartbeatSound.currentTime = 0;
+            heartbeatSound.play();
+        }, 2000);
+    </script>
+</body>
+</html>
